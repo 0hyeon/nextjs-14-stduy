@@ -8,6 +8,7 @@ async function getVideos(id: string) {
 
 export default async function MovieVideos({ id }: { id: string }) {
   const videos = await getVideos(id);
+  console.log("videos : ", videos);
   return (
     <div className={styles.container}>
       {videos.map((video) => (
